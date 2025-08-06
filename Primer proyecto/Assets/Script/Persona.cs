@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+
+
 namespace packagePersona
 {
     public class Persona
@@ -10,7 +12,6 @@ namespace packagePersona
 
         public Persona()
         {
-
         }
         public Persona(string nameP, string mailP, string dirP)
         {

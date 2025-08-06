@@ -2,9 +2,8 @@ using packagePersona;
 using UnityEngine;
 using System;   
 
-namespace PackagePersona
+namespace PackageEstudiante
 {
-    
     public class Estudiante : Persona
     {
         private string codigo;
@@ -13,7 +12,6 @@ namespace PackagePersona
         public Estudiante()
         {
         }
-
         public Estudiante(string carrera, string codigo, string nameP, string mailP, string dirP)
            : base(nameP, mailP, dirP)
         {

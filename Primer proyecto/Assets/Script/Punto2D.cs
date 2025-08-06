@@ -2,11 +2,11 @@ using UnityEngine;
 using System;
 namespace packagePunto2D
 {
+    [Serializable]
     public class Punto2D
     {
         private double x;
         private double y;
-
         public Punto2D()
         {
         }
