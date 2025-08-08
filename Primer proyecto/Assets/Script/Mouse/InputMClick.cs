@@ -1,15 +1,38 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 
-public class InputMClick : MonoBehaviour
+public class InputMClick : MonoBehaviour, IPointerClickHandler
 {
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Vector2 mausepo;
+        mausepo = eventData.position;
+        Debug.Log($"Click detectado en el Panel. Coordenadas del mouse: {mausepo}");
+    }
+}
+        /*
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            transform as RectTransform,
+            eventData.position,
+            eventData.pressEventCamera,
+            out localPoint
+        );
+        
+
+        Debug.Log($"Click detectado en el Panel. Coordenadas locales: {localPoint}");
+    }
+
+    /*
     private void OnMouseDown()
     {
         print("Mouse clicked on: " + gameObject.name);
-        Debug.Log("Mouse clicked on: " + gameObject.name);
+        Debug.Log("Mouse clicked on: " + gameObject.name); 
     }
 
     /*
@@ -63,6 +86,6 @@ public class InputMClick : MonoBehaviour
             }
         }
     }*/
-}
+    
 
   

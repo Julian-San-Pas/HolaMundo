@@ -12,7 +12,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     string rutaE = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "estudiantes.json");
     //string rutaE => Path.Combine(Application.persistentDataPath, "estudiantes.json");
-    
 
     //string rutaP => Path.Combine(Application.persistentDataPath, "personas.json");
 
