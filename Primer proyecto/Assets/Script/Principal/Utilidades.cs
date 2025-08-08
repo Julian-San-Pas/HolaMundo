@@ -5,10 +5,15 @@ using PackageEstudiante;
 //using packagePersona;
 using TMPro;
 using packagePunto2D;
+using JetBrains.Annotations;
+using System;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    string rutaE => Path.Combine(Application.persistentDataPath, "estudiantes.json");
+    string rutaE = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "estudiantes.json");
+    //string rutaE => Path.Combine(Application.persistentDataPath, "estudiantes.json");
+    
+
     //string rutaP => Path.Combine(Application.persistentDataPath, "personas.json");
 
     UsaPersona listas;
@@ -82,8 +87,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 $" Direccion: {e.DirP}, Carrera: {e.Carrera}, Codigo: {e.Codigo}");
         }
     }
+
+    /*
     void Update()
     {
+        public class Cords: Punto2D {      public Cords(double x, double y) : base(x, y)
+        {
+            listas.puntos2D.Add(new Punto2D(x, y));
 
-    }
+        }
+    
+    }*/
 }
